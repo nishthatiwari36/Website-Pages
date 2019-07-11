@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+#boxed1 {
+  border: 1px solid white ;
+  width: 300px;
+  height: 150px;
+  margin-left:180px;
+  margin-top:50px
+}
+#boxed2 {
+  border: 1px solid white ;
+  width: 300px;
+  height: 150px;
+  margin-left:180px;
+  margin-top:50px
+}
+#target {
+  
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#boxed1").appendTo("#target");
+        });
+    });
+</script>
+</head>
+<body>
+        
+      
+
+<div class="split left">
+        <h1><center>New Orders</center></h1>
+        <div id="boxed1">
+                <h3>
+                    Order Details
+                    <br>
+                    <img src="Vend_Order 1.jpg" height=100 width=70> X 2
+                    <button id="button"><img src="Buttons-accept.jpg" height=40 width=40></button>
+                </h3>
+                  </div>
+                  <div id="boxed2">
+                      <h3>
+                          Order Details
+                          <br>
+                          <img src="Vend_Order 1.jpg" height=100 width=70> X 3
+                          <button id="button"><img src="Buttons-accept.jpg" height=40 width=40></button>
+                      </h3>
+                        </div>
+  </div>
+</div>
+
+<div class="split right">
+        <h1><center>Accepted Orders</center></h1>
+            <h3>
+                <div id="target">
+
+                </div>
+                
+            </h3>
+              </div>
+</div>
+     
+</body>
+</html> 
